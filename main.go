@@ -1,13 +1,8 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "net/http"
 
 func main() {
 
-	var now time.Time = time.Now()
-	var year int = now.Year()
-	fmt.Println(year)
+	http.ListenAndServe("localHost:9090", nil)
 }
